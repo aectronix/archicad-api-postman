@@ -1,0 +1,1532 @@
+{
+	"info": {
+		"_postman_id": "95e57329-b387-408a-b4e1-99d4ad15f3a7",
+		"name": "Archicad JSON API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34244389"
+	},
+	"item": [
+		{
+			"name": "Basic Commands",
+			"item": [
+				{
+					"name": "IsAlive",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.IsAlive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetProductInfo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Element Listing Commands",
+			"item": [
+				{
+					"name": "GetAllElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllElements\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSelectedElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetSelectedElements\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetElementsByType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetElementsByType\",\r\n    \"parameters\": {\r\n        \"elementType\": \"{{elementType}}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTypesOfElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetTypesOfElements\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetElementsByClassification",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetElementsByClassification\",\r\n    \"parameters\": {\r\n        \"classificationItemId\": {\r\n            \"guid\": \"{{classItemGuid}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Classification Commands",
+			"item": [
+				{
+					"name": "GetAllClassificationSystems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllClassificationSystems\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClassificationSystemIds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetClassificationSystemIds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClassificationSystems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetClassificationSystems\",\r\n    \"parameters\": {\r\n        \"classificationSystemIds\": [\r\n            {\r\n                \"classificationSystemId\": {\r\n                    \"guid\": \"{{classGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllClassificationsInSystem",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllClassificationsInSystem\",\r\n    \"parameters\": {\r\n        \"classificationSystemId\": {\r\n            \"guid\": \"{{classGuid}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDetailsOfClassificationItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetDetailsOfClassificationItems\",\r\n    \"parameters\": {\r\n        \"classificationItemIds\": [\r\n            {\r\n                \"classificationItemId\": {\r\n                    \"guid\": \"{{classItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClassificationItemAvailability",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetDetailsOfClassificationItems\",\r\n    \"parameters\": {\r\n        \"classificationItemIds\": [\r\n            {\r\n                \"classificationItemId\": {\r\n                    \"guid\": \"{{classItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClassificationsOfElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetClassificationsOfElements\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ],\r\n        \"classificationSystemIds\": [\r\n            {\r\n                \"classificationSystemId\": {\r\n                    \"guid\": \"{{classGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClassificationItemAvailability",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetClassificationItemAvailability\",\r\n    \"parameters\": {\r\n        \"classificationItemIds\": [\r\n            {\r\n                \"classificationItemId\": {\r\n                    \"guid\": \"{{classItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClassificationsOfElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetClassificationsOfElements\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ],\r\n        \"classificationSystemIds\": [\r\n            {\r\n                \"classificationSystemId\": {\r\n                    \"guid\": \"{{classGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetClassificationsOfElements",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.SetClassificationsOfElements\",\r\n    \"parameters\": {\r\n        \"elementClassifications\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                },\r\n                \"classificationId\": {\r\n                    \"classificationItemId\": {\r\n                        \"guid\": \"{{classItemGuid}}\"\r\n                    },\r\n                    \"classificationSystemId\": {\r\n                        \"guid\": \"{{classGuid}}\"\r\n                    }\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Properties Commands",
+			"item": [
+				{
+					"name": "GetPropertyIds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetPropertyIds\",\r\n    \"parameters\": {\r\n        \"properties\": [\r\n            {\r\n                \"type\": \"UserDefined\",\r\n                \"localizedName\": [\r\n                    \"GENERAL RATINGS\",\r\n                    \"Combustible\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPropertyIds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllPropertyIds\",\r\n    \"parameters\": {\r\n        \"propertyType\": \"{{propertyType}}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPropertyNames",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllPropertyNames\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDetailsOfProperties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetDetailsOfProperties\",\r\n    \"parameters\": {\r\n        \"properties\": [\r\n            {\r\n                \"propertyId\": {\r\n                    \"guid\": \"{{propertyGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPropertyDefinitionAvailability",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetPropertyDefinitionAvailability\",\r\n    \"parameters\": {\r\n        \"propertyIds\": [\r\n            {\r\n                \"propertyId\": {\r\n                    \"guid\": \"{{propertyGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPropertyGroups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetPropertyGroups\",\r\n    \"parameters\": {\r\n        \"propertyGroupIds\": [\r\n            {\r\n                \"propertyGroupId\": {\r\n                    \"guid\": \"{{propertyGroupGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPropertyGroupIds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllPropertyGroupIds\",\r\n    \"parameters\": {\r\n        \"propertyType\": \"{{propertyType}}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPropertyValuesOfElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetPropertyValuesOfElements\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ],\r\n        \"properties\": [\r\n            {\r\n                \"propertyId\": {\r\n                    \"guid\": \"{{propertyGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPropertyIdsOfElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetAllPropertyIdsOfElements\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ],\r\n        \"propertyType\": \"{{propertyType}}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetPropertyValuesOfElements",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.SetPropertyValuesOfElements\",\r\n    \"parameters\": {\r\n        \"elementPropertyValues\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                },\r\n                \"propertyId\": {\r\n                    \"guid\": \"{{propertyGuid}}\"\r\n                },\r\n                \"propertyValue\": {\r\n                    \"type\": \"string\",\r\n                    \"status\": \"normal\",\r\n                    \"value\": \"some other value\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Navigator Tree Commands",
+			"item": [
+				{
+					"name": "GetPublisherSetNames",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetPublisherSetNames\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNavigatorItemsType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetNavigatorItemsType\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNavigatorItemTree",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetNavigatorItemTree\",\r\n    \"parameters\": {\r\n        \"navigatorTreeId\": {\r\n            \"type\": \"{{navigatorType}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteNavigatorItems",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.DeleteNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RenameNavigatorItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.RenameNavigatorItem\",\r\n    \"parameters\": {\r\n        \"navigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemGuid}}\"\r\n        },\r\n        \"newName\": \"MyNewName\",\r\n        \"newId\": \"MyNewId\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MoveNavigatorItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.MoveNavigatorItem\",\r\n    \"parameters\": {\r\n        \"navigatorItemIdToMove\": {\r\n            \"guid\": \"{{navigatorItemGuid}}\"\r\n        },\r\n        \"parentNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemParentGuid}}\"\r\n        },\r\n        \"previousNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemPrevGuid}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBuiltInContainerNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetBuiltInContainerNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetElevationNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetElevationNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInteriorElevationNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetInteriorElevationNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDetailNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetDetailNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetWorksheetNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetWorksheetNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSectionNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetSectionNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStoryNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetStoryNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDocument3DNavigatorItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetDocument3DNavigatorItems\",\r\n    \"parameters\": {\r\n        \"navigatorItemIds\": [\r\n            {\r\n                \"navigatorItemId\": {\r\n                    \"guid\": \"{{navigatorItemGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "View Map Commands",
+			"item": [
+				{
+					"name": "CloneProjectMapItemToViewMap",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.CloneProjectMapItemToViewMap\",\r\n    \"parameters\": {\r\n        \"projectMapNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemGuid}}\"\r\n        },\r\n        \"parentNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemParentGuid}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateViewMapFolder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.CreateViewMapFolder\",\r\n    \"parameters\": {\r\n        \"folderParameters\": {\r\n            \"name\": \"{{name}}\"\r\n        },\r\n        \"parentNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemParentGuid}}\"\r\n        },\r\n        \"previousNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemPrevGuid}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Layout Book Commands",
+			"item": [
+				{
+					"name": "GetLayoutSettings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetLayoutSettings\",\r\n    \"parameters\": {\r\n        \"layoutNavigatorItemId\": {\r\n            \"guid\": \"{{layoutItemGuid}}\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateLayoutSubset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.CreateLayoutSubset\",\r\n    \"parameters\": {\r\n        \"parentNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemParentGuid}}\"\r\n        },\r\n        \"subsetParameters\": {\r\n            \"name\": \"{{name}}\",\r\n            \"includeToIDSequence\": true,\r\n            \"customNumbering\": false,\r\n            \"continueNumbering\": true,\r\n            \"useUpperPrefix\": true,\r\n            \"addOwnPrefix\": true,\r\n            \"customNumber\": \"CN\",\r\n            \"autoNumber\": \"AN\",\r\n            \"numberingStyle\": \"ABC\",\r\n            \"startAt\": 0,\r\n            \"ownPrefix\": \"MyPrefix\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateLayout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.CreateLayout\",\r\n    \"parameters\": {\r\n        \"layoutName\": \"{{name}}\",\r\n        \"masterNavigatorItemId\": {\r\n            \"guid\": \"{{layoutMasterItemGuid}}\"\r\n        },\r\n        \"parentNavigatorItemId\": {\r\n            \"guid\": \"{{navigatorItemParentGuid}}\"\r\n        },\r\n        \"layoutParameters\": {\r\n            \"horizontalSize\": 600,\r\n            \"verticalSize\": 400,\r\n            \"leftMargin\": 10,\r\n            \"topMargin\": 10,\r\n            \"rightMargin\": 10,\r\n            \"bottomMargin\": 10,\r\n            \"customLayoutNumber\": \"\",\r\n            \"customLayoutNumbering\": false,\r\n            \"doNotIncludeInNumbering\": false,\r\n            \"displayMasterLayoutBelow\": false,\r\n            \"layoutPageNumber\": 1,\r\n            \"actPageIndex\": 1,\r\n            \"currentRevisionId\": \"\",\r\n            \"currentFinalRevisionId\": \"\",\r\n            \"hasIssuedRevision\": false,\r\n            \"hasActualRevision\": false\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetLayoutSettings",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.SetLayoutSettings\",\r\n    \"parameters\": {\r\n        \"layoutNavigatorItemId\": {\r\n            \"guid\": \"{{layoutItemGuid}}\"\r\n        },\r\n        \"layoutParameters\": {\r\n            \"horizontalSize\": 600,\r\n            \"verticalSize\": 400,\r\n            \"leftMargin\": 10,\r\n            \"topMargin\": 10,\r\n            \"rightMargin\": 10,\r\n            \"bottomMargin\": 10,\r\n            \"customLayoutNumber\": \"\",\r\n            \"customLayoutNumbering\": false,\r\n            \"doNotIncludeInNumbering\": false,\r\n            \"displayMasterLayoutBelow\": false,\r\n            \"layoutPageNumber\": 1,\r\n            \"actPageIndex\": 1,\r\n            \"currentRevisionId\": \"\",\r\n            \"currentFinalRevisionId\": \"\",\r\n            \"hasIssuedRevision\": false,\r\n            \"hasActualRevision\": false\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Element Geometry Commands",
+			"item": [
+				{
+					"name": "Get2DBoundingBoxes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.Get2DBoundingBoxes\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get3DBoundingBoxes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.Get3DBoundingBoxes\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Element Relation Commands",
+			"item": [
+				{
+					"name": "GetElementsRelatedToZones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetElementsRelatedToZones\",\r\n    \"parameters\": {\r\n        \"zones\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Component Commands",
+			"item": [
+				{
+					"name": "GetComponentsOfElements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetComponentsOfElements\",\r\n    \"parameters\": {\r\n        \"elements\": [\r\n            {\r\n                \"elementId\": {\r\n                    \"guid\": \"{{elementGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPropertyValuesOfElementComponents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"API.GetPropertyValuesOfElementComponents\",\r\n    \"parameters\": {\r\n        \"elementComponents\": [\r\n            {\r\n                \"elementComponentId\": {\r\n                    \"elementId\": {\r\n                        \"guid\": \"{{elementGuid}}\"\r\n                    },\r\n                    \"componentId\": {\r\n                        \"guid\": \"{{componentGuid}}\"\r\n                    }\r\n                }\r\n            }\r\n        ],\r\n        \"properties\": [\r\n            {\r\n                \"propertyId\": {\r\n                    \"guid\": \"{{propertyGuid}}\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "name",
+			"value": "Test",
+			"type": "string"
+		},
+		{
+			"key": "elementType",
+			"value": "Wall"
+		},
+		{
+			"key": "elementGuid",
+			"value": "2CF57254-CAD8-450C-B62B-0F7DF1DD035F",
+			"type": "string"
+		},
+		{
+			"key": "componentGuid",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "classGuid",
+			"value": "632C30E5-2B82-4A75-BFAD-D52FEBCE9A4A",
+			"type": "string"
+		},
+		{
+			"key": "classItemGuid",
+			"value": "0EE23E04-F4FC-4DAA-AE52-01A3B0503050",
+			"type": "string"
+		},
+		{
+			"key": "propertyType",
+			"value": "UserDefined",
+			"type": "string"
+		},
+		{
+			"key": "propertyGuid",
+			"value": "50A43019-0E28-47ED-9BAE-8D02F53ADF72",
+			"type": "string"
+		},
+		{
+			"key": "propertyGroupGuid",
+			"value": "D1219C84-EB08-4478-BD05-90495552554A",
+			"type": "string"
+		},
+		{
+			"key": "navigatorType",
+			"value": "ProjectMap",
+			"type": "string"
+		},
+		{
+			"key": "navigatorItemGuid",
+			"value": "D0C2316C-DC71-44E2-B572-691D95E6AB3D",
+			"type": "string"
+		},
+		{
+			"key": "navigatorItemParentGuid",
+			"value": "DFBE153F-D082-465C-A3BA-58CF3F60D318",
+			"type": "string"
+		},
+		{
+			"key": "navigatorItemPrevGuid",
+			"value": "D0C2316C-DC71-44E2-B572-691D95E6AB3D",
+			"type": "string"
+		},
+		{
+			"key": "layoutItemGuid",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "layoutMasterItemGuid",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
